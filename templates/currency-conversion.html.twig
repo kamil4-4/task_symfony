@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Przeliczanie walut{% endblock %}
+
+{% block body %}
+    <h3>Przeliczanie walut</h3>
+    <a href="{{ path('homepage') }}">Strona główna</a><br>
+    <a href="{{ path('lovest_rate') }}">Najniższy kurs</a><br>
+    <br>
+
+    {{ form(form) }}
+
+    {% if sum != null %}
+        <br>
+        Po przewalutowaniu: {{ sum | round(2) }} {{ currency }}
+    {% endif %}
+{% endblock %}

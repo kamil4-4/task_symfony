@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Strona główna{% endblock %}
+
+{% block body %}
+    <h3>Strona główna</h3>
+    <a href="{{ path('lovest_rate') }}">Najniższy kurs</a><br>
+    <a href="{{ path('currency_conversion') }}">Przeliczanie walut</a>
+{% endblock %}

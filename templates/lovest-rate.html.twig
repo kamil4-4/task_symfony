@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Najniższy kurs{% endblock %}
+
+{% block body %}
+    <h3>Najniższy kurs</h3>
+    <a href="{{ path('homepage') }}">Strona główna</a><br>
+    <a href="{{ path('currency_conversion') }}">Przeliczanie walut</a>
+    <br>
+
+    {{ form(form) }}
+
+    {% if highest != null %}
+        <br>
+        Najwyższy kurs: {{ highest | round(2) }} <br>
+        Najniższy kurs: {{ lowest | round(2) }}
+    {% endif %}
+{% endblock %}
